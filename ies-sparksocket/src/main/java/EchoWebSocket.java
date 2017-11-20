@@ -47,11 +47,12 @@ public class EchoWebSocket {
 		try {
 		session.getRemote().sendString(message);
 		session.getRemote().sendString("hola de nuevo");
-		session.getRemote().sendString("bai");
+		
 		for (int i=0; i<1000;i++) {
 			session.getRemote().sendString("hola de nuevo numero: "+i);
 			Thread.sleep(2000);
 		}
+		session.getRemote().sendString("bai");
 		}catch(Exception e) {
 			
 		
